@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,500;0,600;1,400&display=swap");
+
+:root {
+  --color-light: #fbefdf;
+  --color-gray: #c1c0b6;
+  --color-gray-darker: #b2b2a8;
+  --color-dark: #3f3b37;
+  --color-orange: #db4c44;
+  --color-yellow: #e7aa2c;
+  --color-cyan: #32b8cb;
+
+  --font-sans-serif: "Cabin", sans-serif;
+  --font-serif: "Playfair Display" sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-gray-darker);
+  color: var(--color-dark);
+}
+
+.wrapper {
+  background-color: var(--color-gray);
+  min-height: 100vh;
+  margin: 1%;
+  border-radius: 20px;
+}
