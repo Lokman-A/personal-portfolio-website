@@ -33,7 +33,7 @@ const Header = () => {
           </span>
         </Link>
         <h2>Aspiring</h2>
-        <Link to="/projects" className="box contacts">
+        <Link to="/projects" className="box projects">
           <span>Projects</span>
           <span>
             <BsArrowUpRightCircle />
@@ -51,7 +51,9 @@ const Header = () => {
         <h2>Based </h2>
         <Link to="/skills" className="box skills">
           <span>Skills</span>
-          <BsArrowUpRightCircle />
+          <span>
+            <BsArrowUpRightCircle />
+          </span>
         </Link>
         <h2>In Bangladesh</h2>
       </div>
