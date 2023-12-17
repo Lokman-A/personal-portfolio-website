@@ -38,7 +38,7 @@ html {
 
 body {
   /* background-color: var(--color-gray-darker); */
-  background-color: deeppink;
+  background-color: var(--color-dark);
   color: var(--color-dark);
 }
 
