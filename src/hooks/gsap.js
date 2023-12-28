@@ -1,5 +1,8 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const useGsapLinkDownFall = (linkArr) => {
   useEffect(() => {
@@ -71,4 +74,73 @@ export const useGsapBoxScaling = (boxScaleArr) => {
       }
     );
   }, [boxScaleArr]);
+};
+
+export const useGsapProjectTitle = (projectArr, trig) => {
+  useEffect(() => {
+    const el = projectArr.map((el) => el.current);
+    const projectEl = trig.current;
+    gsap.fromTo(
+      el,
+      {
+        y: -500,
+      },
+      {
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: projectEl,
+          start: "top center",
+        },
+      }
+    );
+  }, [projectArr, trig]);
+};
+
+export const useGsapProjectLineForward = (arr, trig) => {
+  useEffect(() => {
+    const el = arr;
+    const projectEl = trig.current;
+    gsap.fromTo(
+      el,
+      {
+        width: 0,
+      },
+      {
+        width: "100%",
+        duration: 3,
+        stagger: 0.5,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: projectEl,
+          start: "top center",
+        },
+      }
+    );
+  }, [arr, trig]);
+};
+
+export const useGsapProjectTitleRef = (arr, trig) => {
+  useEffect(() => {
+    const el = arr.current;
+    const projectEl = trig.current;
+    gsap.fromTo(
+      el,
+      {
+        y: 500,
+      },
+      {
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: projectEl,
+          start: "top center",
+        },
+      }
+    );
+  }, [arr, trig]);
 };
